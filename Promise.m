@@ -15,6 +15,10 @@
  */
 @property (strong) Promise *strongSelf;
 
+/** This is the promise returned from the `then` method. 
+ */
+@property (strong) Promise *returnedPromise;
+
 // Callbacks
 @property (copy) PromiseSuccess success;
 @property (copy) PromiseFailure failure;
@@ -48,21 +52,24 @@
     self.success = success;
     self.failure = failure;
     self.progress = prog;
-    return nil;
+
+    Promise *returnPromise = [[Promise alloc] init];
+    self.returnedPromise = returnPromise;
+    return returnPromise;
 }
 
 #pragma mark - Producer methods
 
 - (void)completeSuccess:(id)object {
     if (self.success) {
-        self.success(object);
+        [self populateReturnPromiseWithPromise:self.success(object)];
     }
     self.strongSelf = nil;
 }
 
 - (void)completeFailure:(id)object error:(NSError *)error {
     if (self.failure) {
-        self.failure(object, error);
+        [self populateReturnPromiseWithPromise:self.failure(object, error)];
     }
     self.strongSelf = nil;
 }
@@ -71,9 +78,15 @@
     if (self.progress) {
         self.progress(prog);
     }
-    self.strongSelf = nil;
 }
 
 #pragma Private Internals
+
+- (void)populateReturnPromiseWithPromise:(Promise *)promise {
+    promise.success = self.returnedPromise.success;
+    promise.failure = self.returnedPromise.failure;
+    promise.progress = self.returnedPromise.progress;
+    promise.strongSelf = promise;
+}
 
 @end

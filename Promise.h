@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Promise;
 
-typedef void (^PromiseSuccess)(id object);
-typedef void (^PromiseFailure)(id object, NSError *error);
+typedef Promise *(^PromiseSuccess)(id object);
+typedef Promise *(^PromiseFailure)(id object, NSError *error);
 typedef void (^PromiseProgress)(CGFloat prog);
-
-typedef BOOL (^PromiseTask)();
 
 @interface Promise : NSObject
 

@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "Promise.h"
+#import "AsyncDemo.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -17,13 +20,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    AsyncDemo *d = [[AsyncDemo alloc] init];
+    NSURL *url = [NSURL URLWithString:@"https://raw.github.com/jkubicek/deal-with-it/master/han_and_lando_deal.png"];
+    [[d fetchImageAtURL:url] then:^(id object) {
+        self.imageView.image = object;
+    }];
 }
 
 @end

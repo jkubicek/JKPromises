@@ -2,21 +2,17 @@
 //  main.m
 //  Promises
 //
-//  Created by Jim Kubicek on 2/1/13.
+//  Created by Jim Kubicek on 5/11/13.
 //  Copyright (c) 2013 Jim Kubicek. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-int main(int argc, const char * argv[])
+#import "AppDelegate.h"
+
+int main(int argc, char *argv[])
 {
-
     @autoreleasepool {
-        
-        // insert code here...
-        NSLog(@"Hello, World!");
-        
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
-    return 0;
 }
-

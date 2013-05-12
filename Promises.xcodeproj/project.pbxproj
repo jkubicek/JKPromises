@@ -22,9 +22,9 @@
 		95D493B9173F5DCB006E808F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D49393173F5DCB006E808F /* UIKit.framework */; };
 		95D493BA173F5DCB006E808F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D49395173F5DCB006E808F /* Foundation.framework */; };
 		95D493C2173F5DCB006E808F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95D493C0173F5DCB006E808F /* InfoPlist.strings */; };
-		95D493C5173F5DCB006E808F /* PromisesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493C4173F5DCB006E808F /* PromisesTests.m */; };
 		95D493D2173F5E3E006E808F /* AsyncDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493CF173F5E3E006E808F /* AsyncDemo.m */; };
 		95D493D3173F5E3E006E808F /* Promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493D1173F5E3E006E808F /* Promise.m */; };
+		95D493D5173F76AB006E808F /* PromiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493D4173F76AB006E808F /* PromiseTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +58,11 @@
 		95D493B7173F5DCB006E808F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		95D493BF173F5DCB006E808F /* PromisesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PromisesTests-Info.plist"; sourceTree = "<group>"; };
 		95D493C1173F5DCB006E808F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		95D493C3173F5DCB006E808F /* PromisesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromisesTests.h; sourceTree = "<group>"; };
-		95D493C4173F5DCB006E808F /* PromisesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromisesTests.m; sourceTree = "<group>"; };
 		95D493CE173F5E3E006E808F /* AsyncDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncDemo.h; path = ../AsyncDemo.h; sourceTree = "<group>"; };
 		95D493CF173F5E3E006E808F /* AsyncDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncDemo.m; path = ../AsyncDemo.m; sourceTree = "<group>"; };
 		95D493D0173F5E3E006E808F /* Promise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Promise.h; sourceTree = "<group>"; };
 		95D493D1173F5E3E006E808F /* Promise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Promise.m; sourceTree = "<group>"; };
+		95D493D4173F76AB006E808F /* PromiseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromiseTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +153,7 @@
 		95D493BD173F5DCB006E808F /* PromisesTests */ = {
 			isa = PBXGroup;
 			children = (
-				95D493C3173F5DCB006E808F /* PromisesTests.h */,
-				95D493C4173F5DCB006E808F /* PromisesTests.m */,
+				95D493D4173F76AB006E808F /* PromiseTests.m */,
 				95D493BE173F5DCB006E808F /* Supporting Files */,
 			);
 			path = PromisesTests;
@@ -292,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D493C5173F5DCB006E808F /* PromisesTests.m in Sources */,
+				95D493D5173F76AB006E808F /* PromiseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

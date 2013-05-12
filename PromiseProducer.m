@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Jim Kubicek. All rights reserved.
 //
 
-#import "AsyncDemo.h"
-#import "Promise.h"
+#import "PromiseProducer.h"
+#import "Promise+Producer.h"
 
-@implementation AsyncDemo
+@implementation PromiseProducer
 
 - (Promise *)fetchImageAtURL:(NSURL *)url {
     Promise *promise = [[Promise alloc] init];

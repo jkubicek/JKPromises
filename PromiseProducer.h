@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class Promise;
 
-@interface AsyncDemo : NSObject
+@interface PromiseProducer : NSObject
 
 - (Promise *)fetchImageAtURL:(NSURL *)url;
 

@@ -17,12 +17,12 @@
 		95D493A8173F5DCB006E808F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D493A7173F5DCB006E808F /* Default@2x.png */; };
 		95D493AA173F5DCB006E808F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D493A9173F5DCB006E808F /* Default-568h@2x.png */; };
 		95D493AD173F5DCB006E808F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D493AB173F5DCB006E808F /* MainStoryboard.storyboard */; };
-		95D493B0173F5DCB006E808F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493AF173F5DCB006E808F /* ViewController.m */; };
+		95D493B0173F5DCB006E808F /* PromiseConsumingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493AF173F5DCB006E808F /* PromiseConsumingViewController.m */; };
 		95D493B8173F5DCB006E808F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D493B7173F5DCB006E808F /* SenTestingKit.framework */; };
 		95D493B9173F5DCB006E808F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D49393173F5DCB006E808F /* UIKit.framework */; };
 		95D493BA173F5DCB006E808F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D49395173F5DCB006E808F /* Foundation.framework */; };
 		95D493C2173F5DCB006E808F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95D493C0173F5DCB006E808F /* InfoPlist.strings */; };
-		95D493D2173F5E3E006E808F /* AsyncDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493CF173F5E3E006E808F /* AsyncDemo.m */; };
+		95D493D2173F5E3E006E808F /* PromiseProducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493CF173F5E3E006E808F /* PromiseProducer.m */; };
 		95D493D3173F5E3E006E808F /* Promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493D1173F5E3E006E808F /* Promise.m */; };
 		95D493D5173F76AB006E808F /* PromiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D493D4173F76AB006E808F /* PromiseTests.m */; };
 /* End PBXBuildFile section */
@@ -52,17 +52,18 @@
 		95D493A7173F5DCB006E808F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		95D493A9173F5DCB006E808F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		95D493AC173F5DCB006E808F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		95D493AE173F5DCB006E808F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		95D493AF173F5DCB006E808F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		95D493AE173F5DCB006E808F /* PromiseConsumingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromiseConsumingViewController.h; sourceTree = "<group>"; };
+		95D493AF173F5DCB006E808F /* PromiseConsumingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromiseConsumingViewController.m; sourceTree = "<group>"; };
 		95D493B6173F5DCB006E808F /* PromisesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PromisesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D493B7173F5DCB006E808F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		95D493BF173F5DCB006E808F /* PromisesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PromisesTests-Info.plist"; sourceTree = "<group>"; };
 		95D493C1173F5DCB006E808F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		95D493CE173F5E3E006E808F /* AsyncDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncDemo.h; path = ../AsyncDemo.h; sourceTree = "<group>"; };
-		95D493CF173F5E3E006E808F /* AsyncDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncDemo.m; path = ../AsyncDemo.m; sourceTree = "<group>"; };
+		95D493CE173F5E3E006E808F /* PromiseProducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PromiseProducer.h; path = ../PromiseProducer.h; sourceTree = "<group>"; };
+		95D493CF173F5E3E006E808F /* PromiseProducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PromiseProducer.m; path = ../PromiseProducer.m; sourceTree = "<group>"; };
 		95D493D0173F5E3E006E808F /* Promise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Promise.h; sourceTree = "<group>"; };
 		95D493D1173F5E3E006E808F /* Promise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Promise.m; sourceTree = "<group>"; };
 		95D493D4173F76AB006E808F /* PromiseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromiseTests.m; sourceTree = "<group>"; };
+		95D493D6174043C1006E808F /* Promise+Producer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Promise+Producer.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 			children = (
 				95D493D0173F5E3E006E808F /* Promise.h */,
 				95D493D1173F5E3E006E808F /* Promise.m */,
+				95D493D6174043C1006E808F /* Promise+Producer.h */,
 				95D49399173F5DCB006E808F /* Promises */,
 				95D493BD173F5DCB006E808F /* PromisesTests */,
 				95D49392173F5DCB006E808F /* Frameworks */,
@@ -126,11 +128,11 @@
 			children = (
 				95D493A2173F5DCB006E808F /* AppDelegate.h */,
 				95D493A3173F5DCB006E808F /* AppDelegate.m */,
-				95D493CE173F5E3E006E808F /* AsyncDemo.h */,
-				95D493CF173F5E3E006E808F /* AsyncDemo.m */,
+				95D493CE173F5E3E006E808F /* PromiseProducer.h */,
+				95D493CF173F5E3E006E808F /* PromiseProducer.m */,
 				95D493AB173F5DCB006E808F /* MainStoryboard.storyboard */,
-				95D493AE173F5DCB006E808F /* ViewController.h */,
-				95D493AF173F5DCB006E808F /* ViewController.m */,
+				95D493AE173F5DCB006E808F /* PromiseConsumingViewController.h */,
+				95D493AF173F5DCB006E808F /* PromiseConsumingViewController.m */,
 				95D4939A173F5DCB006E808F /* Supporting Files */,
 			);
 			path = Promises;
@@ -280,8 +282,8 @@
 			files = (
 				95D493A0173F5DCB006E808F /* main.m in Sources */,
 				95D493A4173F5DCB006E808F /* AppDelegate.m in Sources */,
-				95D493B0173F5DCB006E808F /* ViewController.m in Sources */,
-				95D493D2173F5E3E006E808F /* AsyncDemo.m in Sources */,
+				95D493B0173F5DCB006E808F /* PromiseConsumingViewController.m in Sources */,
+				95D493D2173F5E3E006E808F /* PromiseProducer.m in Sources */,
 				95D493D3173F5E3E006E808F /* Promise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -53,6 +53,28 @@
     STAssertTrue(promiseCalled, @"the promise should have been called");
 }
 
+- (void)testChainReturnBlocks {
+    __block BOOL promise1Called = NO;
+    __block BOOL promise2Called = NO;
+    Promise *testPromise1 = [self task];
+    __block Promise *testPromise2 = [self task];
+    [[testPromise1 then:^Promise *(id object) {
+        promise1Called = YES;
+        return testPromise2;
+    }] then:^Promise *(id object) {
+        promise2Called = YES;
+        return nil;
+    }];
+
+    [testPromise1 completeSuccess:nil];
+    [testPromise2 completeSuccess:nil];
+
+    STAssertTrue(promise1Called, @"The first completion block should have been"
+                 " called");
+    STAssertTrue(promise2Called, @"The second completion block should have been"
+                 " called");
+}
+
 #pragma mark - Helper Methods
 
 - (Promise *)task {

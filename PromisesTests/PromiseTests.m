@@ -38,5 +38,26 @@
     STAssertNotNil(promise, @"Promise should be initialized");
 }
 
+- (void)testCompletionHandlerCalled {
+    NSString *testObject = @"test object";
+    __block BOOL promiseCalled = NO;
+    Promise *testPromise = [self task];
+    [testPromise then:^Promise *(id object) {
+        STAssertEqualObjects(object, testObject, @"The test object should be"
+                             " passed to the promise");
+        promiseCalled = YES;
+        return nil;
+    }];
+
+    [testPromise completeSuccess:testObject];
+    STAssertTrue(promiseCalled, @"the promise should have been called");
+}
+
+#pragma mark - Helper Methods
+
+- (Promise *)task {
+    return [[Promise alloc] init];
+}
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "Promise+Producer.h"
 
 @interface PromiseTests : SenTestCase
 
@@ -31,6 +32,11 @@
 }
 
 #pragma mark - Tests
+
+- (void)testInit {
+    Promise *promise = [[Promise alloc] init];
+    STAssertNotNil(promise, @"Promise should be initialized");
+}
 
 
 @end

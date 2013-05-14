@@ -14,6 +14,12 @@
 
 @interface Promise ()
 
+/** The reference object can optionally be set to hold a strong reference to an
+ * id. Helpful for Promise factories that may not be able to hold a reference to 
+ * the object doing the asynchronous calculations.
+ */
+@property (strong) id referenceObject;
+
 - (void)completeSuccess:(id)object;
 - (void)completeFailure:(id)object error:(NSError *)error;
 - (void)progress:(CGFloat)prog;

@@ -80,7 +80,7 @@
     }
 }
 
-#pragma Private Internals
+#pragma mark - Private Internals
 
 - (void)populateReturnPromiseWithPromise:(Promise *)promise {
     promise.success = self.returnedPromise.success;

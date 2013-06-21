@@ -7,6 +7,7 @@
 //
 
 #import "Promise.h"
+#import "Promise+Producer.h"
 
 @interface Promise ()
 
@@ -23,14 +24,11 @@
 @property (copy) PromiseSuccess success;
 @property (copy) PromiseFailure failure;
 @property (copy) PromiseProgress progress;
+@property (copy) PromiseFinally finallyBlock;
 
 @end
 
 @implementation Promise
-
-#pragma mark - Constructors
-
-#pragma mark - Initialization
 
 #pragma mark - Then
 
@@ -58,20 +56,24 @@
     return returnPromise;
 }
 
+- (void)finally:(PromiseFinally)finallyBlock {
+    self.finallyBlock = finallyBlock;
+}
+
 #pragma mark - Producer methods
 
 - (void)completeSuccess:(id)object {
     if (self.success) {
         [self populateReturnPromiseWithPromise:self.success(object)];
     }
-    self.strongSelf = nil;
+    [self completeFinally];
 }
 
 - (void)completeFailure:(id)object error:(NSError *)error {
-    if (self.failure) {
-        [self populateReturnPromiseWithPromise:self.failure(object, error)];
-    }
-    self.strongSelf = nil;
+    if (self.failure)
+        self.failure(object, error);
+    [self.returnedPromise completeFailure:object error:error];
+    [self completeFinally];
 }
 
 - (void)progress:(CGFloat)prog {
@@ -79,6 +81,14 @@
         self.progress(prog);
     }
 }
+
+- (void)completeFinally {
+    if (self.returnedPromise.finallyBlock) {
+        self.returnedPromise.finallyBlock();
+    }
+    self.strongSelf = nil;
+}
+
 
 #pragma mark - Private Internals
 

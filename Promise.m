@@ -83,7 +83,9 @@
 }
 
 - (void)completeFinally {
-    if (self.returnedPromise.finallyBlock) {
+    if (self.finallyBlock) {
+        self.finallyBlock();
+    } else if (self.returnedPromise.finallyBlock) {
         self.returnedPromise.finallyBlock();
     }
     self.strongSelf = nil;
